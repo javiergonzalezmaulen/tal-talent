@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Talent Partner LATAM - Javier González</title>
+    <title>TAL Talent</title>
     <!-- Carga de Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Carga de Font Awesome para íconos -->
@@ -73,7 +73,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <!-- Nombre de marca genérico -->
-                <a href="#hero" class="text-xl font-bold text-primary">Talent Partner LATAM - Javier González</a>
+                <a href="#hero" class="text-xl font-bold text-primary">TAL Talent</a>
                 <div class="flex space-x-4">
                     <a href="#services" class="text-sm font-medium hover:text-primary transition">Servicios</a>
                     <a href="#niches" class="text-sm font-medium hover:text-primary transition">Mi Especialización</a>
@@ -88,12 +88,12 @@
     <section id="hero" class="pt-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="bg-card p-10 lg:p-16 rounded-xl bg-opacity-90 max-w-4xl shadow-2xl mx-auto">
-                <p class="text-2xl font-semibold text-primary mb-4">Strategic Recruitment Partner</p>
+                <p class="text-2xl font-semibold text-primary mb-4">Talent Architect LATAM</p>
                 <h1 class="text-6xl lg:text-8xl font-extrabold text-white leading-tight">
-                    External Partner <span class="text-primary">for Growth</span>
+                    Contrata efectivo y a tiempo ¡Ahora!
                 </h1>
                 <p class="mt-6 text-xl text-gray-400">
-                    Transformo el hiring en una ventaja competitiva. Especialista en Tech, Sales & Leadership para Startups, medianas y grandes corporaciones en LATAM.
+                    Servicio de reclutamiento especializado en roles de tecnología, negocios, operaciones y Liderazgo.
                 </p>
                 <!-- Link a precios y garantía con el ícono y estilo 'cool' -->
                 <a href="#pricing" class="mt-8 inline-block bg-primary text-secondary-color px-8 py-3 rounded-full text-lg font-semibold hover:bg-white transition duration-300 shadow-primary">
@@ -147,7 +147,7 @@
                 <div class="bg-secondary-color p-8 rounded-lg border border-gray-700">
                     <div class="text-5xl text-primary mb-4"><i class="fa-solid fa-handshake"></i></div>
                     <h3 class="text-2xl font-semibold text-white mb-2">Sales Performers</h3>
-                    <p class="text-gray-400">Contratación de Account Executives y Líderes Comerciales que **sí venden** y cumplen objetivos, con historial comprobado.</p>
+                    <p class="text-gray-400">Contratación de Account Executives y Líderes Comerciales que sí venden y cumplen objetivos, con historial comprobado.</p>
                 </div>
                 <!-- Niche 3: Leadership -->
                 <div class="bg-secondary-color p-8 rounded-lg border border-gray-700">
@@ -168,8 +168,8 @@
             <div class="max-w-3xl mx-auto text-center mb-10 p-6 bg-card rounded-lg border border-gray-700">
                 <h3 class="text-2xl font-bold text-primary mb-3">Racional de la Tarifa: Adaptado a tu Etapa de Crecimiento</h3>
                 <p class="text-gray-400">
-                    Diferencio mi tarifa según la etapa de la empresa, no solo por el tamaño, sino por el **nivel de apoyo estratégico** y el **impacto crítico** de los roles que mis clientes necesitan. 
-                    Mis multiplicadores reflejan el rigor de la búsqueda, la confidencialidad y el *market mapping* requerido para asegurar la estabilidad del equipo en cada momento de crecimiento.
+                    Diferencio mi tarifa según la etapa de la empresa, no solo por el tamaño, sino por el nivel de apoyo estratégico y el impacto crítico de los roles que mis clientes necesitan. 
+                    Mis multiplicadores reflejan el rigor de la búsqueda, la confidencialidad y el market mapping requerido para asegurar la estabilidad del equipo en cada momento de crecimiento.
                 </p>
             </div>
             <!-- Fin Racional de la diferencia de tarifas -->
@@ -177,7 +177,7 @@
             <div class="grid lg:grid-cols-2 gap-12">
                 <!-- Pricing Structure (Estructura de Precios) -->
                 <div>
-                    <p class="text-lg mb-6">Mi tarifa es un porcentaje del Salario Bruto Mensual (Pago por Éxito). Incluye mi **Garantía de Rendimiento de 2 Meses**.</p>
+                    <p class="text-lg mb-6">Mi tarifa es un porcentaje del Salario Bruto Mensual (Pago por Éxito). Incluye mi Garantía de Rendimiento de 2 Meses.</p>
 
                     <div class="space-y-4">
                         <!-- Price Card 1: Seed Stage -->
@@ -230,8 +230,13 @@
                     </select>
 
                     <label for="grossSalary" class="block text-sm font-medium mb-2">Salario Bruto Mensual (USD):</label>
-                    <input type="number" id="grossSalary" value="2000" min="500" class="w-full p-3 rounded-lg bg-secondary-color border border-gray-600 focus:ring-primary focus:border-primary text-white mb-6" oninput="calculateCost()">
+                    <input type="number" id="grossSalary" value="0" min="0" class="w-full p-3 rounded-lg bg-secondary-color border border-gray-600 focus:ring-primary focus:border-primary text-white mb-2" oninput="calculateCost()">
                     
+                    <!-- NUEVO: Display formateado del salario para feedback visual -->
+                    <div class="text-lg font-semibold text-white mb-6">
+                        Valor ingresado: <span id="formattedSalaryDisplay" class="text-primary"></span>
+                    </div>
+
                     <div id="results" class="space-y-4">
                         <div class="flex justify-between items-center border-b border-gray-700 pb-2">
                             <span class="font-semibold">Seed Stage (1.0x)</span>
@@ -248,7 +253,7 @@
                     </div>
 
                     <p class="mt-8 text-sm text-gray-500">
-                        *Los resultados son una estimación. La cotización final se basa en la complejidad y exclusividad del rol.
+                        *Los resultados son una estimación. La cotización final será un acuerdo entre las partes.
                         <span id="exchangeRateNote" class="block mt-2 text-xs italic text-gray-600">
                            **Nota:** Los tipos de cambio utilizados son fijos y solo referenciales para la estimación.
                         </span>
@@ -259,7 +264,7 @@
             <!-- Guarantee Box (Caja de Garantía) -->
             <div class="mt-16 p-8 bg-primary/10 rounded-xl border border-primary text-center">
                 <h3 class="text-3xl font-extrabold text-primary mb-3">GARANTÍA DE RENDIMIENTO</h3>
-                <p class="text-xl font-medium text-white">Si el candidato no funciona en los primeros **2 meses**, repito la búsqueda **sin costo adicional**.</p>
+                <p class="text-xl font-medium text-white">Si el candidato no funciona en los primeros <strong>2 meses</strong>, repito la búsqueda <strong>sin costo adicional</strong>.</p>
             </div>
         </div>
     </section>
@@ -293,7 +298,7 @@
 
     <!-- Footer -->
     <footer class="py-8 text-center text-sm text-gray-500 border-t border-gray-800">
-        <p>&copy; 2025 Talent Partner LATAM | External Recruitment Services. Todos los derechos reservados.</p>
+        <p>&copy; 2025 TAL Talent | External Recruitment Services. Todos los derechos reservados.</p>
     </footer>
 
     <!-- JavaScript para la Calculadora de Costos -->
@@ -318,26 +323,7 @@
                 salary = 0;
             }
 
-            // 1. Convertir el salario de entrada a la base (USD)
-            const rateToUSD = exchangeRates[selectedCurrency];
-            let baseSalaryUSD = salary / rateToUSD;
-
-            // 2. Aplicar las tasas de éxito (basadas en USD)
-            const rateSmall = 1.0;
-            const rateMedium = 1.2;
-            const rateLarge = 1.5;
-
-            const costSmallUSD = baseSalaryUSD * rateSmall;
-            const costMediumUSD = baseSalaryUSD * rateMedium;
-            const costLargeUSD = baseSalaryUSD * rateLarge;
-
-            // 3. Convertir los costos de vuelta a la moneda seleccionada para mostrar
-            const rateFromUSD = exchangeRates[selectedCurrency];
-            let costSmall = costSmallUSD * rateFromUSD;
-            let costMedium = costMediumUSD * rateFromUSD;
-            let costLarge = costLargeUSD * rateFromUSD;
-            
-            // 4. Determinar el formato y el número de decimales
+            // 4. Determinar el formato y el número de decimales (MOVIDO ARRIBA)
             let currencyCode = selectedCurrency;
             let locale = 'es-CL'; // Usamos un locale genérico en español
             
@@ -365,7 +351,30 @@
                 maximumFractionDigits: minimumFractionDigits,
             });
 
-            // 5. Actualizar la UI
+            // NUEVO: 1. Actualizar el display formateado del salario (feedback visual)
+            document.getElementById('formattedSalaryDisplay').textContent = formatter.format(salary);
+
+            // 1. Convertir el salario de entrada a la base (USD)
+            const rateToUSD = exchangeRates[selectedCurrency];
+            let baseSalaryUSD = salary / rateToUSD;
+
+            // 2. Aplicar las tasas de éxito (basadas en USD)
+            const rateSmall = 1.0;
+            const rateMedium = 1.2;
+            const rateLarge = 1.5;
+
+            const costSmallUSD = baseSalaryUSD * rateSmall;
+            const costMediumUSD = baseSalaryUSD * rateMedium;
+            const costLargeUSD = baseSalaryUSD * rateLarge;
+
+            // 3. Convertir los costos de vuelta a la moneda seleccionada para mostrar
+            const rateFromUSD = exchangeRates[selectedCurrency];
+            let costSmall = costSmallUSD * rateFromUSD;
+            let costMedium = costMediumUSD * rateFromUSD;
+            let costLarge = costLargeUSD * rateFromUSD;
+            
+            
+            // 5. Actualizar la UI de costos
             document.getElementById('costSmall').textContent = formatter.format(costSmall);
             document.getElementById('costMedium').textContent = formatter.format(costMedium);
             document.getElementById('costLarge').textContent = formatter.format(costLarge);
